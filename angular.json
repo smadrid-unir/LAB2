@@ -16,15 +16,14 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/lab2",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "styles": []
           },
           "configurations": {
             "production": {
@@ -64,6 +63,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
